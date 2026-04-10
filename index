@@ -3,273 +3,780 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad – Hot Wheels Scanner</title>
+  <title>Política de Privacidad - Hot Wheels Scanner</title>
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      line-height: 1.7;
-      color: #111;
-      background: #fff;
+    :root{
+      --bg:#0b1020;
+      --card:#121a30;
+      --card2:#18223f;
+      --text:#f3f6ff;
+      --muted:#b9c4e0;
+      --accent:#4da3ff;
+      --accent2:#7c4dff;
+      --border:rgba(255,255,255,0.10);
     }
-    h1,h2,h3{ color:#0b57d0; }
-    .box{
-      background:#f5f8ff;
-      padding:16px;
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(135deg,#0b1020,#101935,#0b1020);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .title h1{
+      margin:0;
+      font-size:30px;
+    }
+
+    .title p{
+      margin:4px 0 0;
+      color:var(--muted);
+    }
+
+    .lang-box{
+      background:rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      padding:12px 14px;
+      border-radius:14px;
+      backdrop-filter:blur(10px);
+    }
+
+    select{
+      background:#101935;
+      color:var(--text);
+      border:1px solid var(--border);
       border-radius:10px;
-      border:1px solid #d9e5ff;
+      padding:10px 12px;
+      font-size:15px;
+      outline:none;
+    }
+
+    .card{
+      background:rgba(18,26,48,0.92);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:0 12px 40px rgba(0,0,0,0.22);
+    }
+
+    h2{
+      margin-top:32px;
+      font-size:24px;
+      color:#ffffff;
+      border-bottom:1px solid rgba(255,255,255,0.10);
+      padding-bottom:8px;
+    }
+
+    h3{
+      margin-top:24px;
+      font-size:19px;
+      color:#dbe7ff;
+    }
+
+    p, li{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    strong{
+      color:#ffffff;
+    }
+
+    ul{
+      padding-left:22px;
+    }
+
+    .info{
+      background:linear-gradient(135deg,rgba(77,163,255,0.14),rgba(124,77,255,0.14));
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:16px;
+      padding:18px;
+      margin:18px 0;
+    }
+
+    .footer{
+      margin-top:30px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.10);
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(77,163,255,0.15);
+      border:1px solid rgba(77,163,255,0.25);
+      color:#dfeaff;
+      margin-right:8px;
+      margin-bottom:8px;
+      font-size:13px;
+    }
+
+    a{
+      color:#8fc2ff;
+      text-decoration:none;
+    }
+
+    @media (max-width: 768px){
+      .title h1{font-size:24px}
+      .card{padding:20px}
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">🔥</div>
+        <div class="title">
+          <h1 id="pageTitle">Política de Privacidad</h1>
+          <p id="pageSubtitle">Hot Wheels Scanner · MaxStudio</p>
+        </div>
+      </div>
 
-<h1>Política de Privacidad de Hot Wheels Scanner</h1>
+      <div class="lang-box">
+        <label for="language" id="langLabel" style="display:block;margin-bottom:8px;color:#dfe7ff;">Idioma</label>
+        <select id="language">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
+    </div>
 
-<p><strong>Última actualización:</strong> 10 de abril de 2026</p>
+    <div class="card" id="content"></div>
+  </div>
 
-<div class="box">
-  <p>
-    Esta Política de Privacidad describe cómo Hot Wheels Scanner recopila, utiliza,
-    almacena, protege y, en su caso, comparte información cuando los usuarios utilizan
-    la aplicación móvil Hot Wheels Scanner y los servicios relacionados.
-  </p>
-  <p>
-    Al utilizar la aplicación, el usuario acepta las prácticas descritas en esta
-    Política de Privacidad, en la medida permitida por la legislación aplicable.
-  </p>
-</div>
+  <script>
+    const translations = {
+      es: {
+        pageTitle: "Política de Privacidad",
+        pageSubtitle: "Hot Wheels Scanner · MaxStudio",
+        langLabel: "Idioma",
+        content: `
+          <p><strong>Última actualización:</strong> 10 de abril de 2026</p>
 
-<h2>1. Identidad del responsable</h2>
-<p>
-  Responsable del tratamiento: <strong>[TU NOMBRE O NOMBRE DE TU EMPRESA]</strong><br>
-  Correo de contacto: <strong>[TU EMAIL]</strong><br>
-  País / domicilio profesional: <strong>[TU PAÍS O DIRECCIÓN PROFESIONAL]</strong>
-</p>
+          <div class="info">
+            <p>
+              Esta Política de Privacidad describe cómo <strong>MaxStudio</strong> recopila, utiliza,
+              protege y trata la información relacionada con el uso de la aplicación
+              <strong>Hot Wheels Scanner</strong>.
+            </p>
+            <p>
+              Al utilizar la aplicación, el usuario acepta esta política en la medida permitida
+              por la legislación aplicable.
+            </p>
+          </div>
 
-<h2>2. Qué hace la aplicación</h2>
-<p>
-  Hot Wheels Scanner es una aplicación orientada al reconocimiento visual y consulta
-  informativa de productos coleccionables de la marca Hot Wheels. La app puede permitir
-  al usuario tomar fotografías, analizarlas mediante sistemas automáticos y mostrar
-  resultados aproximados como identificación del producto, nombre estimado del modelo,
-  coincidencias probables y rangos orientativos de precios localizados en fuentes online
-  o servicios de terceros.
-</p>
+          <span class="badge">RGPD / GDPR</span>
+          <span class="badge">UK GDPR</span>
+          <span class="badge">CCPA / CPRA</span>
+          <span class="badge">LGPD</span>
 
-<h2>3. Datos que podemos recopilar</h2>
+          <h2>1. Responsable del tratamiento</h2>
+          <p><strong>Empresa:</strong> MaxStudio</p>
+          <p><strong>Correo de contacto:</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Región:</strong> Europa</p>
 
-<h3>3.1 Datos proporcionados directamente por el usuario</h3>
-<ul>
-  <li>Fotografías tomadas por el usuario desde la cámara o seleccionadas desde su dispositivo.</li>
-  <li>Consultas o textos introducidos manualmente en la aplicación.</li>
-  <li>Datos enviados por el usuario al contactar con soporte.</li>
-</ul>
+          <h2>2. Objeto de la aplicación</h2>
+          <p>
+            Hot Wheels Scanner es una aplicación destinada al reconocimiento visual aproximado
+            de productos coleccionables, especialmente vehículos Hot Wheels, mediante imágenes
+            tomadas por el usuario o seleccionadas desde su dispositivo. La app puede mostrar
+            resultados estimados como identificación del modelo, coincidencias probables y
+            referencias orientativas de precios mínimos y máximos.
+          </p>
 
-<h3>3.2 Datos técnicos y de uso</h3>
-<ul>
-  <li>Tipo de dispositivo, versión del sistema operativo, idioma, región y modelo del dispositivo.</li>
-  <li>Datos técnicos básicos de funcionamiento, errores, cierres inesperados y registros de diagnóstico.</li>
-  <li>Información aproximada sobre el uso de funciones de la app.</li>
-</ul>
+          <h2>3. Datos que pueden recopilarse</h2>
+          <h3>3.1 Datos facilitados por el usuario</h3>
+          <ul>
+            <li>Fotografías tomadas con la cámara.</li>
+            <li>Imágenes seleccionadas desde el dispositivo, cuando proceda.</li>
+            <li>Consultas o datos enviados al contactar con soporte.</li>
+          </ul>
 
-<h3>3.3 Permisos del dispositivo</h3>
-<ul>
-  <li><strong>Cámara:</strong> para capturar imágenes de productos y analizarlas.</li>
-  <li><strong>Internet / red:</strong> para procesar consultas, obtener coincidencias y mostrar resultados online.</li>
-  <li><strong>Almacenamiento o acceso a imágenes</strong> si la versión de la app permite seleccionar imágenes ya guardadas.</li>
-</ul>
+          <h3>3.2 Datos técnicos</h3>
+          <ul>
+            <li>Tipo de dispositivo, sistema operativo y versión.</li>
+            <li>Idioma, configuración regional y datos básicos de funcionamiento.</li>
+            <li>Registros técnicos, errores, cierres inesperados y diagnóstico.</li>
+          </ul>
 
-<h2>4. Finalidades del tratamiento</h2>
-<p>Podemos tratar los datos para las siguientes finalidades:</p>
-<ul>
-  <li>Permitir el funcionamiento principal de la aplicación.</li>
-  <li>Analizar imágenes para identificar modelos o productos de Hot Wheels.</li>
-  <li>Realizar búsquedas relacionadas con el producto detectado.</li>
-  <li>Mostrar información estimada sobre coincidencias, precios mínimos, precios máximos o referencias orientativas.</li>
-  <li>Mejorar la precisión, estabilidad, rendimiento y seguridad de la aplicación.</li>
-  <li>Prevenir fraudes, abusos o usos indebidos del servicio.</li>
-  <li>Cumplir obligaciones legales o requerimientos válidos de autoridades competentes.</li>
-</ul>
+          <h3>3.3 Permisos</h3>
+          <ul>
+            <li><strong>Cámara:</strong> para capturar imágenes de los productos.</li>
+            <li><strong>Internet:</strong> para procesar búsquedas y obtener resultados online.</li>
+            <li><strong>Acceso a imágenes o almacenamiento:</strong> cuando la app permita elegir imágenes del dispositivo.</li>
+          </ul>
 
-<h2>5. Base jurídica del tratamiento</h2>
-<p>
-  Cuando resulte aplicable el Reglamento General de Protección de Datos (RGPD) u otra
-  normativa similar, las bases jurídicas del tratamiento podrán incluir:
-</p>
-<ul>
-  <li><strong>Ejecución del servicio solicitado por el usuario</strong>, cuando el tratamiento sea necesario para prestar la función principal de la app.</li>
-  <li><strong>Consentimiento</strong>, cuando sea necesario, por ejemplo para permisos concretos o determinados tratamientos opcionales.</li>
-  <li><strong>Interés legítimo</strong>, para mejorar el servicio, mantener la seguridad y resolver incidencias, siempre que no prevalezcan los derechos del usuario.</li>
-  <li><strong>Cumplimiento de obligaciones legales</strong>, cuando la normativa exija conservar o facilitar determinada información.</li>
-</ul>
+          <h2>4. Finalidad del tratamiento</h2>
+          <ul>
+            <li>Permitir el funcionamiento principal de la aplicación.</li>
+            <li>Analizar imágenes y detectar productos o modelos aproximados.</li>
+            <li>Realizar búsquedas relacionadas con el producto detectado.</li>
+            <li>Mostrar resultados orientativos de identificación y precios.</li>
+            <li>Mejorar precisión, estabilidad, seguridad y rendimiento.</li>
+            <li>Prevenir usos fraudulentos, abusivos o contrarios a la ley.</li>
+            <li>Cumplir obligaciones legales cuando resulte necesario.</li>
+          </ul>
 
-<h2>6. Uso de inteligencia artificial y análisis automatizado</h2>
-<p>
-  La aplicación puede utilizar herramientas automatizadas, incluyendo modelos de visión,
-  reconocimiento de imágenes y sistemas de inferencia asistida por inteligencia artificial,
-  para identificar productos, interpretar fotografías y generar coincidencias probables.
-</p>
-<p>
-  El usuario reconoce que:
-</p>
-<ul>
-  <li>Los resultados pueden ser <strong>aproximados</strong> y no siempre exactos.</li>
-  <li>La app puede equivocarse al identificar un modelo, edición, variante, blister, colección o precio.</li>
-  <li>Los precios mostrados son orientativos y no constituyen tasación oficial, oferta vinculante, ni garantía de valor de mercado.</li>
-</ul>
+          <h2>5. Base jurídica</h2>
+          <p>
+            Cuando sea aplicable el Reglamento General de Protección de Datos (RGPD) u otras
+            normas equivalentes, el tratamiento podrá basarse en:
+          </p>
+          <ul>
+            <li><strong>Ejecución del servicio</strong>, cuando el tratamiento sea necesario para prestar la funcionalidad de la app.</li>
+            <li><strong>Consentimiento</strong>, para permisos o tratamientos opcionales.</li>
+            <li><strong>Interés legítimo</strong>, para seguridad, prevención de errores y mejora del servicio.</li>
+            <li><strong>Cumplimiento de obligaciones legales</strong>.</li>
+          </ul>
 
-<h2>7. Precios y fuentes externas</h2>
-<p>
-  Hot Wheels Scanner puede consultar información de internet o de servicios de terceros
-  para mostrar resultados estimados. Los precios mostrados pueden variar por país, estado
-  del producto, blister, rareza, edición, demanda, moneda, fecha y fuente consultada.
-</p>
-<p>
-  No garantizamos que los precios mínimos, máximos o medios sean exactos, actualizados o
-  completos en todo momento.
-</p>
+          <h2>6. Inteligencia artificial y análisis automatizado</h2>
+          <p>
+            La aplicación puede utilizar sistemas automáticos de reconocimiento visual,
+            inferencia y análisis asistido por inteligencia artificial para identificar
+            productos, interpretar imágenes y generar coincidencias probables.
+          </p>
+          <p>
+            El usuario reconoce que los resultados pueden ser <strong>aproximados</strong> y
+            no siempre exactos. La aplicación puede equivocarse en la identificación,
+            edición, variante, blister, colección o valor orientativo.
+          </p>
 
-<h2>8. Conservación de los datos</h2>
-<p>
-  Conservaremos los datos únicamente durante el tiempo necesario para cumplir las finalidades
-  descritas en esta Política de Privacidad, salvo que la ley exija o permita un periodo superior.
-</p>
-<ul>
-  <li>Las imágenes podrán procesarse temporalmente para generar resultados.</li>
-  <li>Los registros técnicos podrán conservarse por periodos limitados para seguridad, diagnóstico y mejora del servicio.</li>
-  <li>Los datos de soporte podrán mantenerse mientras sea necesario para atender incidencias y cumplir obligaciones legales.</li>
-</ul>
+          <h2>7. Precios y fuentes externas</h2>
+          <p>
+            Los precios mostrados por la aplicación son meramente <strong>orientativos</strong>.
+            Pueden proceder de búsquedas o referencias de internet y variar según el estado
+            del producto, país, divisa, rareza, edición, demanda, blister, conservación o fecha.
+          </p>
+          <p>
+            MaxStudio no garantiza la exactitud, actualización o integridad de dichos precios.
+          </p>
 
-<h2>9. Compartición de datos</h2>
-<p>
-  No vendemos datos personales como práctica general. Sin embargo, podríamos compartir
-  información limitada con:
-</p>
-<ul>
-  <li>Proveedores tecnológicos o de infraestructura necesarios para el funcionamiento de la app.</li>
-  <li>Servicios de análisis, alojamiento, procesamiento o seguridad.</li>
-  <li>Autoridades públicas cuando exista obligación legal, requerimiento judicial o necesidad legítima de defensa jurídica.</li>
-</ul>
-<p>
-  Cuando trabajemos con terceros, adoptaremos medidas razonables para exigir que traten
-  la información conforme a la normativa aplicable y solo para finalidades compatibles.
-</p>
+          <h2>8. Conservación de datos</h2>
+          <p>
+            Los datos se conservarán únicamente durante el tiempo necesario para las finalidades
+            descritas en esta política o durante el plazo exigido por la normativa aplicable.
+          </p>
+          <ul>
+            <li>Las imágenes pueden tratarse temporalmente para generar resultados.</li>
+            <li>Los registros técnicos pueden conservarse por periodos limitados con fines de seguridad y diagnóstico.</li>
+            <li>Las comunicaciones de soporte podrán mantenerse mientras sea razonable o legalmente necesario.</li>
+          </ul>
 
-<h2>10. Transferencias internacionales de datos</h2>
-<p>
-  Dado que ciertos servicios tecnológicos pueden operar desde distintos países, la información
-  podría ser tratada o almacenada fuera del país de residencia del usuario. Cuando sea
-  necesario, procuraremos adoptar mecanismos de protección adecuados, como cláusulas
-  contractuales, medidas de seguridad técnicas y organizativas, o cualquier otra garantía
-  exigida por la legislación aplicable.
-</p>
+          <h2>9. Compartición de información</h2>
+          <p>
+            MaxStudio no vende datos personales como práctica general. No obstante, determinados
+            datos podrán ser tratados por proveedores tecnológicos necesarios para la operativa
+            de la aplicación, tales como servicios de alojamiento, análisis, conectividad,
+            seguridad o procesamiento técnico.
+          </p>
+          <p>
+            También podrán comunicarse datos cuando exista obligación legal, requerimiento
+            judicial o necesidad legítima de defensa jurídica.
+          </p>
 
-<h2>11. Seguridad de la información</h2>
-<p>
-  Aplicamos medidas técnicas y organizativas razonables para proteger la información frente
-  a pérdida, acceso no autorizado, alteración, divulgación o destrucción. No obstante,
-  ningún sistema conectado a internet es completamente seguro y, por tanto, no podemos
-  garantizar seguridad absoluta.
-</p>
+          <h2>10. Transferencias internacionales</h2>
+          <p>
+            Algunos servicios tecnológicos pueden operar fuera del país de residencia del usuario.
+            Cuando proceda, se adoptarán medidas razonables para cumplir con la legislación
+            aplicable en materia de transferencias internacionales de datos.
+          </p>
 
-<h2>12. Derechos de los usuarios</h2>
-<p>
-  Dependiendo del país o región del usuario, este puede tener determinados derechos sobre
-  sus datos personales, entre ellos:
-</p>
-<ul>
-  <li>Derecho de acceso.</li>
-  <li>Derecho de rectificación.</li>
-  <li>Derecho de supresión o eliminación.</li>
-  <li>Derecho de oposición.</li>
-  <li>Derecho a limitar el tratamiento.</li>
-  <li>Derecho a la portabilidad de los datos.</li>
-  <li>Derecho a retirar el consentimiento cuando el tratamiento se base en él.</li>
-  <li>Derecho a no ser objeto de ciertas decisiones automatizadas, cuando la ley lo contemple.</li>
-</ul>
-<p>
-  El usuario puede ejercer sus derechos escribiendo a:
-  <strong>[TU EMAIL DE PRIVACIDAD]</strong>.
-</p>
+          <h2>11. Seguridad</h2>
+          <p>
+            MaxStudio aplica medidas técnicas y organizativas razonables para proteger la
+            información frente a acceso no autorizado, pérdida, destrucción o alteración.
+            Sin embargo, ningún sistema conectado a internet puede garantizar seguridad absoluta.
+          </p>
 
-<h2>13. Información específica para usuarios del Espacio Económico Europeo (EEE)</h2>
-<p>
-  Si resides en la Unión Europea o en el EEE, tratamos tus datos de conformidad con el
-  Reglamento (UE) 2016/679 (RGPD), que establece principios como licitud, lealtad,
-  transparencia, limitación de la finalidad, minimización de datos, exactitud, limitación
-  del plazo de conservación, integridad y confidencialidad. También reconoce derechos como
-  acceso, rectificación, supresión, limitación, oposición y portabilidad. 
-</p>
+          <h2>12. Derechos del usuario</h2>
+          <p>Según la jurisdicción aplicable, el usuario puede tener derecho a:</p>
+          <ul>
+            <li>Acceder a sus datos.</li>
+            <li>Solicitar rectificación.</li>
+            <li>Solicitar supresión o eliminación.</li>
+            <li>Oponerse a determinados tratamientos.</li>
+            <li>Solicitar limitación del tratamiento.</li>
+            <li>Solicitar portabilidad, cuando legalmente proceda.</li>
+            <li>Retirar el consentimiento cuando corresponda.</li>
+          </ul>
+          <p>
+            Para ejercer sus derechos, puede contactar en:
+            <strong>maxi1985_19@hotmail.com</strong>
+          </p>
 
-<h2>14. Información específica para usuarios del Reino Unido</h2>
-<p>
-  Si resides en el Reino Unido, el tratamiento de tus datos puede regirse por el UK GDPR
-  y por la Data Protection Act 2018. En ese caso, tendrás derechos similares a los
-  previstos en el régimen británico de protección de datos.
-</p>
+          <h2>13. Usuarios de la Unión Europea y EEE</h2>
+          <p>
+            Si el usuario reside en la Unión Europea o en el Espacio Económico Europeo,
+            el tratamiento de sus datos podrá regirse por el Reglamento (UE) 2016/679 (RGPD),
+            que reconoce principios como licitud, lealtad, transparencia, minimización,
+            exactitud, integridad, confidencialidad y limitación de la finalidad.
+          </p>
 
-<h2>15. Información específica para usuarios de California</h2>
-<p>
-  Si resides en California, podrías tener derechos conforme a la California Consumer Privacy
-  Act (CCPA), modificada por la California Privacy Rights Act (CPRA), incluyendo, según
-  corresponda, el derecho a conocer qué información se recopila, el derecho a solicitar
-  eliminación, corrección y otros derechos de privacidad previstos por la normativa aplicable.
-</p>
-<p>
-  En la medida en que la ley lo exija, facilitaremos mecanismos razonables para la gestión
-  de dichas solicitudes.
-</p>
+          <h2>14. Usuarios del Reino Unido</h2>
+          <p>
+            Si el usuario reside en el Reino Unido, el tratamiento podrá regirse por el
+            UK GDPR y la legislación británica aplicable en protección de datos.
+          </p>
 
-<h2>16. Información específica para usuarios de Brasil</h2>
-<p>
-  Si resides en Brasil, el tratamiento de datos personales puede estar sujeto a la Lei Geral
-  de Proteção de Dados (LGPD). En tal caso, el usuario podrá ejercer los derechos que le
-  reconozca esa normativa, incluyendo confirmación del tratamiento, acceso, corrección,
-  anonimización, bloqueo, eliminación y demás derechos legalmente previstos.
-</p>
+          <h2>15. Usuarios de California</h2>
+          <p>
+            Si el usuario reside en California, puede disponer de derechos en virtud de
+            la CCPA y la CPRA, incluyendo el derecho a conocer, corregir o solicitar la
+            eliminación de determinada información personal, según corresponda.
+          </p>
 
-<h2>17. Menores de edad</h2>
-<p>
-  La aplicación no está dirigida intencionalmente a menores de edad cuando la ley exija
-  consentimiento parental o condiciones especiales de tratamiento. Si detectamos que se han
-  recopilado datos personales de un menor en contra de la normativa aplicable, adoptaremos
-  medidas razonables para eliminarlos o restringir su tratamiento.
-</p>
+          <h2>16. Usuarios de Brasil</h2>
+          <p>
+            Si el usuario reside en Brasil, el tratamiento podrá regirse por la
+            Lei Geral de Proteção de Dados (LGPD), con los derechos reconocidos por
+            dicha normativa.
+          </p>
 
-<h2>18. Enlaces y servicios de terceros</h2>
-<p>
-  La app puede incluir enlaces, referencias o integraciones con servicios de terceros.
-  No somos responsables de las políticas de privacidad, prácticas o contenidos de sitios
-  web o plataformas externas. Recomendamos leer sus condiciones y políticas antes de usarlos.
-</p>
+          <h2>17. Menores de edad</h2>
+          <p>
+            La aplicación no está dirigida intencionadamente a menores de edad cuando la
+            normativa exija consentimiento parental u otras condiciones especiales.
+            Si se detecta tratamiento indebido de datos de menores, se adoptarán medidas
+            razonables para eliminar o restringir dichos datos.
+          </p>
 
-<h2>19. Cambios en esta política</h2>
-<p>
-  Podemos actualizar esta Política de Privacidad en cualquier momento para reflejar cambios
-  legales, técnicos, operativos o funcionales. La versión vigente será la publicada en esta
-  misma URL, indicando su fecha de última actualización.
-</p>
+          <h2>18. Enlaces y servicios de terceros</h2>
+          <p>
+            La aplicación puede contener referencias o integraciones con servicios de terceros.
+            MaxStudio no se hace responsable de las políticas o prácticas de privacidad de
+            sitios o plataformas externas.
+          </p>
 
-<h2>20. Contacto</h2>
-<p>
-  Si tienes preguntas sobre esta Política de Privacidad o deseas ejercer tus derechos,
-  puedes contactar con:
-</p>
-<p>
-  <strong>[TU NOMBRE O EMPRESA]</strong><br>
-  <strong>Email:</strong> [TU EMAIL]<br>
-  <strong>País:</strong> [TU PAÍS]
-</p>
+          <h2>19. Cambios en esta política</h2>
+          <p>
+            MaxStudio podrá actualizar esta Política de Privacidad en cualquier momento para
+            reflejar cambios legales, técnicos u operativos. La versión vigente será la
+            publicada en esta misma dirección.
+          </p>
 
-<h2>21. Aviso importante</h2>
-<p>
-  Hot Wheels Scanner ofrece resultados automáticos y estimaciones orientativas. La app no
-  garantiza autenticidad, rareza, valor de reventa, valor de inversión ni exactitud absoluta
-  en la identificación o en los precios mostrados. El usuario debe verificar siempre la
-  información con fuentes adicionales antes de tomar decisiones económicas, comerciales o de colección.
-</p>
+          <h2>20. Contacto</h2>
+          <p><strong>Empresa:</strong> MaxStudio</p>
+          <p><strong>Correo:</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Región:</strong> Europa</p>
 
+          <h2>21. Aviso importante</h2>
+          <p>
+            Hot Wheels Scanner ofrece resultados automáticos y estimaciones orientativas.
+            La aplicación no garantiza autenticidad, rareza, valor de mercado, valor de reventa
+            ni exactitud absoluta en la identificación o precios mostrados. El usuario debe
+            contrastar la información con fuentes adicionales antes de tomar decisiones económicas,
+            comerciales o de colección.
+          </p>
+
+          <div class="footer">
+            © 2026 MaxStudio · Hot Wheels Scanner
+          </div>
+        `
+      },
+
+      en: {
+        pageTitle: "Privacy Policy",
+        pageSubtitle: "Hot Wheels Scanner · MaxStudio",
+        langLabel: "Language",
+        content: `
+          <p><strong>Last updated:</strong> April 10, 2026</p>
+          <div class="info">
+            <p>This Privacy Policy explains how <strong>MaxStudio</strong> collects, uses, protects, and processes information related to the use of <strong>Hot Wheels Scanner</strong>.</p>
+            <p>By using the application, the user accepts this policy to the extent permitted by applicable law.</p>
+          </div>
+          <h2>1. Data Controller</h2>
+          <p><strong>Company:</strong> MaxStudio</p>
+          <p><strong>Contact email:</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Region:</strong> Europe</p>
+          <h2>2. Purpose of the App</h2>
+          <p>Hot Wheels Scanner is designed to visually identify collectible products, especially Hot Wheels vehicles, using images captured or selected by the user. The app may display approximate identification results and estimated minimum and maximum price references.</p>
+          <h2>3. Data We May Collect</h2>
+          <ul>
+            <li>Photos captured with the camera.</li>
+            <li>Images selected from the device when applicable.</li>
+            <li>Technical device and app usage data.</li>
+            <li>Error logs and diagnostics.</li>
+          </ul>
+          <h2>4. Purpose of Processing</h2>
+          <ul>
+            <li>Provide app functionality.</li>
+            <li>Analyze images and identify approximate models.</li>
+            <li>Perform online related searches.</li>
+            <li>Improve accuracy, security, and performance.</li>
+          </ul>
+          <h2>5. Legal Basis</h2>
+          <p>Processing may be based on service performance, consent, legitimate interest, or legal obligations, where applicable.</p>
+          <h2>6. AI and Automated Analysis</h2>
+          <p>The app may use automated visual recognition and AI-assisted systems. Results are approximate and may not always be correct.</p>
+          <h2>7. Prices and External Sources</h2>
+          <p>Displayed prices are for informational purposes only and may vary depending on condition, region, currency, rarity, edition, packaging, and date.</p>
+          <h2>8. Data Retention</h2>
+          <p>Data is retained only for as long as necessary for the purposes described or as required by law.</p>
+          <h2>9. Data Sharing</h2>
+          <p>MaxStudio does not generally sell personal data. Limited processing by technical providers may occur when necessary to operate the app.</p>
+          <h2>10. International Transfers</h2>
+          <p>Some technical providers may process data outside the user’s country. Appropriate safeguards may be used where required.</p>
+          <h2>11. Security</h2>
+          <p>Reasonable technical and organizational measures are used, but absolute security cannot be guaranteed.</p>
+          <h2>12. User Rights</h2>
+          <p>Depending on the applicable law, users may have rights of access, correction, deletion, restriction, objection, portability, and withdrawal of consent.</p>
+          <p><strong>Contact:</strong> maxi1985_19@hotmail.com</p>
+          <h2>13. EEA Users</h2>
+          <p>If you are in the EEA, your data may be processed under GDPR principles and rights.</p>
+          <h2>14. UK Users</h2>
+          <p>If you are in the UK, your data may be processed under UK GDPR and related laws.</p>
+          <h2>15. California Users</h2>
+          <p>California users may have rights under CCPA/CPRA as applicable.</p>
+          <h2>16. Brazil Users</h2>
+          <p>Brazilian users may have rights under LGPD as applicable.</p>
+          <h2>17. Minors</h2>
+          <p>The app is not intentionally directed to minors where parental consent is legally required.</p>
+          <h2>18. Third-Party Services</h2>
+          <p>The app may reference or interact with third-party services. MaxStudio is not responsible for their privacy practices.</p>
+          <h2>19. Changes</h2>
+          <p>This Privacy Policy may be updated at any time.</p>
+          <h2>20. Contact</h2>
+          <p><strong>Company:</strong> MaxStudio<br><strong>Email:</strong> maxi1985_19@hotmail.com<br><strong>Region:</strong> Europe</p>
+          <h2>21. Important Notice</h2>
+          <p>Hot Wheels Scanner provides automated and estimated results only. No guarantee is made regarding authenticity, rarity, market value, resale value, or full accuracy.</p>
+          <div class="footer">© 2026 MaxStudio · Hot Wheels Scanner</div>
+        `
+      },
+
+      fr: {
+        pageTitle: "Politique de Confidentialité",
+        pageSubtitle: "Hot Wheels Scanner · MaxStudio",
+        langLabel: "Langue",
+        content: `
+          <p><strong>Dernière mise à jour :</strong> 10 avril 2026</p>
+          <div class="info">
+            <p>Cette Politique de Confidentialité explique comment <strong>MaxStudio</strong> collecte, utilise, protège et traite les informations liées à l’utilisation de <strong>Hot Wheels Scanner</strong>.</p>
+          </div>
+          <h2>1. Responsable du traitement</h2>
+          <p><strong>Entreprise :</strong> MaxStudio</p>
+          <p><strong>Email :</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Région :</strong> Europe</p>
+          <h2>2. Objet de l’application</h2>
+          <p>Hot Wheels Scanner est conçue pour identifier visuellement des produits de collection à partir d’images prises ou sélectionnées par l’utilisateur.</p>
+          <h2>3. Données collectées</h2>
+          <ul>
+            <li>Photos prises avec l’appareil photo.</li>
+            <li>Images sélectionnées sur l’appareil.</li>
+            <li>Données techniques de fonctionnement.</li>
+            <li>Journaux d’erreurs et diagnostics.</li>
+          </ul>
+          <h2>4. Finalités</h2>
+          <ul>
+            <li>Faire fonctionner l’application.</li>
+            <li>Analyser les images et identifier des modèles probables.</li>
+            <li>Afficher des résultats et des prix indicatifs.</li>
+            <li>Améliorer la sécurité et les performances.</li>
+          </ul>
+          <h2>5. Base juridique</h2>
+          <p>Le traitement peut reposer sur l’exécution du service, le consentement, l’intérêt légitime ou une obligation légale.</p>
+          <h2>6. IA et analyse automatisée</h2>
+          <p>L’application peut utiliser des systèmes automatiques et d’intelligence artificielle. Les résultats restent approximatifs.</p>
+          <h2>7. Prix et sources externes</h2>
+          <p>Les prix affichés sont donnés à titre indicatif uniquement.</p>
+          <h2>8. Conservation</h2>
+          <p>Les données sont conservées uniquement pendant la durée nécessaire.</p>
+          <h2>9. Partage</h2>
+          <p>MaxStudio ne vend pas les données personnelles de manière générale.</p>
+          <h2>10. Transferts internationaux</h2>
+          <p>Certaines données peuvent être traitées hors du pays de l’utilisateur.</p>
+          <h2>11. Sécurité</h2>
+          <p>Des mesures raisonnables sont appliquées, sans garantie absolue.</p>
+          <h2>12. Droits des utilisateurs</h2>
+          <p>Les utilisateurs peuvent bénéficier de droits d’accès, de rectification, d’effacement et autres selon la loi applicable.</p>
+          <p><strong>Contact :</strong> maxi1985_19@hotmail.com</p>
+          <h2>13. UE / EEE</h2>
+          <p>Le traitement peut être soumis au RGPD.</p>
+          <h2>14. Royaume-Uni</h2>
+          <p>Le traitement peut être soumis au UK GDPR.</p>
+          <h2>15. Californie</h2>
+          <p>Certains droits peuvent exister selon la CCPA/CPRA.</p>
+          <h2>16. Brésil</h2>
+          <p>Certains droits peuvent exister selon la LGPD.</p>
+          <h2>17. Mineurs</h2>
+          <p>L’application n’est pas destinée intentionnellement aux mineurs lorsque le consentement parental est requis.</p>
+          <h2>18. Services tiers</h2>
+          <p>MaxStudio n’est pas responsable des pratiques de confidentialité des services tiers.</p>
+          <h2>19. Modifications</h2>
+          <p>Cette politique peut être modifiée à tout moment.</p>
+          <h2>20. Contact</h2>
+          <p><strong>Entreprise :</strong> MaxStudio<br><strong>Email :</strong> maxi1985_19@hotmail.com<br><strong>Région :</strong> Europe</p>
+          <h2>21. Avis important</h2>
+          <p>Les résultats sont automatiques et indicatifs. Aucune garantie absolue n’est donnée.</p>
+          <div class="footer">© 2026 MaxStudio · Hot Wheels Scanner</div>
+        `
+      },
+
+      it: {
+        pageTitle: "Informativa sulla Privacy",
+        pageSubtitle: "Hot Wheels Scanner · MaxStudio",
+        langLabel: "Lingua",
+        content: `
+          <p><strong>Ultimo aggiornamento:</strong> 10 aprile 2026</p>
+          <div class="info">
+            <p>La presente Informativa sulla Privacy spiega come <strong>MaxStudio</strong> raccoglie, utilizza, protegge e tratta le informazioni relative all’uso di <strong>Hot Wheels Scanner</strong>.</p>
+          </div>
+          <h2>1. Titolare del trattamento</h2>
+          <p><strong>Azienda:</strong> MaxStudio</p>
+          <p><strong>Email:</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Regione:</strong> Europa</p>
+          <h2>2. Finalità dell’app</h2>
+          <p>L’app è destinata al riconoscimento visivo approssimativo di prodotti da collezione tramite immagini.</p>
+          <h2>3. Dati raccolti</h2>
+          <ul>
+            <li>Foto scattate con la fotocamera.</li>
+            <li>Immagini selezionate dal dispositivo.</li>
+            <li>Dati tecnici e diagnostici.</li>
+          </ul>
+          <h2>4. Finalità del trattamento</h2>
+          <ul>
+            <li>Fornire la funzionalità dell’app.</li>
+            <li>Analizzare immagini e identificare modelli probabili.</li>
+            <li>Mostrare risultati e prezzi indicativi.</li>
+          </ul>
+          <h2>5. Base giuridica</h2>
+          <p>Il trattamento può basarsi su esecuzione del servizio, consenso, interesse legittimo o obblighi di legge.</p>
+          <h2>6. IA e analisi automatizzata</h2>
+          <p>I risultati possono essere approssimativi e non sempre esatti.</p>
+          <h2>7. Prezzi e fonti esterne</h2>
+          <p>I prezzi mostrati sono solo indicativi.</p>
+          <h2>8. Conservazione</h2>
+          <p>I dati sono conservati solo per il tempo necessario.</p>
+          <h2>9. Condivisione</h2>
+          <p>MaxStudio non vende normalmente dati personali.</p>
+          <h2>10. Trasferimenti internazionali</h2>
+          <p>Alcuni servizi tecnici possono operare fuori dal paese dell’utente.</p>
+          <h2>11. Sicurezza</h2>
+          <p>Vengono adottate misure ragionevoli, senza garanzia assoluta.</p>
+          <h2>12. Diritti dell’utente</h2>
+          <p>L’utente può avere diritti di accesso, rettifica, cancellazione e altri previsti dalla legge.</p>
+          <p><strong>Contatto:</strong> maxi1985_19@hotmail.com</p>
+          <h2>13. Utenti UE / SEE</h2>
+          <p>Il trattamento può essere soggetto al GDPR.</p>
+          <h2>14. Utenti Regno Unito</h2>
+          <p>Il trattamento può essere soggetto al UK GDPR.</p>
+          <h2>15. Utenti California</h2>
+          <p>Possono esistere diritti ai sensi del CCPA/CPRA.</p>
+          <h2>16. Utenti Brasile</h2>
+          <p>Possono esistere diritti ai sensi della LGPD.</p>
+          <h2>17. Minori</h2>
+          <p>L’app non è intenzionalmente destinata ai minori quando è richiesto il consenso dei genitori.</p>
+          <h2>18. Servizi di terze parti</h2>
+          <p>MaxStudio non è responsabile delle pratiche privacy di terze parti.</p>
+          <h2>19. Modifiche</h2>
+          <p>Questa informativa può essere aggiornata in qualsiasi momento.</p>
+          <h2>20. Contatto</h2>
+          <p><strong>Azienda:</strong> MaxStudio<br><strong>Email:</strong> maxi1985_19@hotmail.com<br><strong>Regione:</strong> Europa</p>
+          <h2>21. Avviso importante</h2>
+          <p>I risultati sono automatici e indicativi. Non viene garantita un’accuratezza assoluta.</p>
+          <div class="footer">© 2026 MaxStudio · Hot Wheels Scanner</div>
+        `
+      },
+
+      pt: {
+        pageTitle: "Política de Privacidade",
+        pageSubtitle: "Hot Wheels Scanner · MaxStudio",
+        langLabel: "Idioma",
+        content: `
+          <p><strong>Última atualização:</strong> 10 de abril de 2026</p>
+          <div class="info">
+            <p>Esta Política de Privacidade explica como a <strong>MaxStudio</strong> coleta, usa, protege e trata informações relacionadas ao uso do <strong>Hot Wheels Scanner</strong>.</p>
+          </div>
+          <h2>1. Controlador dos dados</h2>
+          <p><strong>Empresa:</strong> MaxStudio</p>
+          <p><strong>Email:</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Região:</strong> Europa</p>
+          <h2>2. Finalidade do aplicativo</h2>
+          <p>O aplicativo é destinado à identificação visual aproximada de produtos colecionáveis por meio de imagens.</p>
+          <h2>3. Dados coletados</h2>
+          <ul>
+            <li>Fotos tiradas com a câmera.</li>
+            <li>Imagens selecionadas do dispositivo.</li>
+            <li>Dados técnicos e diagnósticos.</li>
+          </ul>
+          <h2>4. Finalidades do tratamento</h2>
+          <ul>
+            <li>Fornecer a funcionalidade do app.</li>
+            <li>Analisar imagens e identificar modelos prováveis.</li>
+            <li>Mostrar resultados e preços estimados.</li>
+          </ul>
+          <h2>5. Base legal</h2>
+          <p>O tratamento pode se basear na execução do serviço, consentimento, interesse legítimo ou obrigação legal.</p>
+          <h2>6. IA e análise automatizada</h2>
+          <p>Os resultados podem ser aproximados e nem sempre exatos.</p>
+          <h2>7. Preços e fontes externas</h2>
+          <p>Os preços exibidos são apenas indicativos.</p>
+          <h2>8. Retenção de dados</h2>
+          <p>Os dados são mantidos apenas pelo tempo necessário.</p>
+          <h2>9. Compartilhamento</h2>
+          <p>A MaxStudio não vende dados pessoais de forma geral.</p>
+          <h2>10. Transferências internacionais</h2>
+          <p>Alguns serviços técnicos podem operar fora do país do usuário.</p>
+          <h2>11. Segurança</h2>
+          <p>São aplicadas medidas razoáveis, sem garantia absoluta.</p>
+          <h2>12. Direitos do usuário</h2>
+          <p>O usuário pode ter direitos de acesso, correção, exclusão e outros conforme a lei aplicável.</p>
+          <p><strong>Contato:</strong> maxi1985_19@hotmail.com</p>
+          <h2>13. Usuários da UE / EEE</h2>
+          <p>O tratamento pode estar sujeito ao GDPR.</p>
+          <h2>14. Usuários do Reino Unido</h2>
+          <p>O tratamento pode estar sujeito ao UK GDPR.</p>
+          <h2>15. Usuários da Califórnia</h2>
+          <p>Podem existir direitos nos termos da CCPA/CPRA.</p>
+          <h2>16. Usuários do Brasil</h2>
+          <p>Podem existir direitos nos termos da LGPD.</p>
+          <h2>17. Menores</h2>
+          <p>O app não é intencionalmente direcionado a menores quando o consentimento parental for exigido.</p>
+          <h2>18. Serviços de terceiros</h2>
+          <p>A MaxStudio não é responsável pelas práticas de privacidade de terceiros.</p>
+          <h2>19. Alterações</h2>
+          <p>Esta política pode ser atualizada a qualquer momento.</p>
+          <h2>20. Contato</h2>
+          <p><strong>Empresa:</strong> MaxStudio<br><strong>Email:</strong> maxi1985_19@hotmail.com<br><strong>Região:</strong> Europa</p>
+          <h2>21. Aviso importante</h2>
+          <p>Os resultados são automáticos e apenas orientativos. Não há garantia de precisão absoluta.</p>
+          <div class="footer">© 2026 MaxStudio · Hot Wheels Scanner</div>
+        `
+      },
+
+      ru: {
+        pageTitle: "Политика конфиденциальности",
+        pageSubtitle: "Hot Wheels Scanner · MaxStudio",
+        langLabel: "Язык",
+        content: `
+          <p><strong>Последнее обновление:</strong> 10 апреля 2026 г.</p>
+          <div class="info">
+            <p>Настоящая Политика конфиденциальности объясняет, как <strong>MaxStudio</strong> собирает, использует, защищает и обрабатывает информацию, связанную с использованием <strong>Hot Wheels Scanner</strong>.</p>
+          </div>
+          <h2>1. Оператор данных</h2>
+          <p><strong>Компания:</strong> MaxStudio</p>
+          <p><strong>Email:</strong> maxi1985_19@hotmail.com</p>
+          <p><strong>Регион:</strong> Европа</p>
+          <h2>2. Назначение приложения</h2>
+          <p>Приложение предназначено для приблизительного визуального распознавания коллекционных товаров по изображениям.</p>
+          <h2>3. Какие данные могут собираться</h2>
+          <ul>
+            <li>Фотографии, сделанные камерой.</li>
+            <li>Изображения, выбранные с устройства.</li>
+            <li>Технические и диагностические данные.</li>
+          </ul>
+          <h2>4. Цели обработки</h2>
+          <ul>
+            <li>Обеспечение работы приложения.</li>
+            <li>Анализ изображений и определение вероятных моделей.</li>
+            <li>Отображение результатов и ориентировочных цен.</li>
+          </ul>
+          <h2>5. Правовые основания</h2>
+          <p>Обработка может основываться на оказании услуги, согласии, законном интересе или юридической обязанности.</p>
+          <h2>6. ИИ и автоматизированный анализ</h2>
+          <p>Результаты могут быть приблизительными и не всегда точными.</p>
+          <h2>7. Цены и внешние источники</h2>
+          <p>Показываемые цены носят исключительно справочный характер.</p>
+          <h2>8. Срок хранения данных</h2>
+          <p>Данные хранятся только столько, сколько необходимо.</p>
+          <h2>9. Передача данных</h2>
+          <p>MaxStudio обычно не продаёт персональные данные.</p>
+          <h2>10. Международная передача</h2>
+          <p>Некоторые технические сервисы могут работать за пределами страны пользователя.</p>
+          <h2>11. Безопасность</h2>
+          <p>Применяются разумные меры безопасности, но абсолютная защита не гарантируется.</p>
+          <h2>12. Права пользователя</h2>
+          <p>Пользователь может иметь права на доступ, исправление, удаление и иные права в соответствии с применимым законодательством.</p>
+          <p><strong>Контакт:</strong> maxi1985_19@hotmail.com</p>
+          <h2>13. Пользователи ЕС / ЕЭЗ</h2>
+          <p>Обработка может регулироваться GDPR.</p>
+          <h2>14. Пользователи Великобритании</h2>
+          <p>Обработка может регулироваться UK GDPR.</p>
+          <h2>15. Пользователи Калифорнии</h2>
+          <p>Могут существовать права в соответствии с CCPA/CPRA.</p>
+          <h2>16. Пользователи Бразилии</h2>
+          <p>Могут существовать права в соответствии с LGPD.</p>
+          <h2>17. Несовершеннолетние</h2>
+          <p>Приложение не предназначено специально для несовершеннолетних, если требуется согласие родителей.</p>
+          <h2>18. Сторонние сервисы</h2>
+          <p>MaxStudio не несёт ответственности за политику конфиденциальности сторонних сервисов.</p>
+          <h2>19. Изменения</h2>
+          <p>Данная политика может быть обновлена в любое время.</p>
+          <h2>20. Контакты</h2>
+          <p><strong>Компания:</strong> MaxStudio<br><strong>Email:</strong> maxi1985_19@hotmail.com<br><strong>Регион:</strong> Европа</p>
+          <h2>21. Важное уведомление</h2>
+          <p>Результаты являются автоматическими и ориентировочными. Абсолютная точность не гарантируется.</p>
+          <div class="footer">© 2026 MaxStudio · Hot Wheels Scanner</div>
+        `
+      }
+    };
+
+    const content = document.getElementById("content");
+    const pageTitle = document.getElementById("pageTitle");
+    const pageSubtitle = document.getElementById("pageSubtitle");
+    const langLabel = document.getElementById("langLabel");
+    const languageSelect = document.getElementById("language");
+
+    function setLanguage(lang) {
+      const t = translations[lang] || translations.es;
+      pageTitle.textContent = t.pageTitle;
+      pageSubtitle.textContent = t.pageSubtitle;
+      langLabel.textContent = t.langLabel;
+      content.innerHTML = t.content;
+      document.documentElement.lang = lang;
+      localStorage.setItem("privacy_lang", lang);
+    }
+
+    const savedLang = localStorage.getItem("privacy_lang") || "es";
+    languageSelect.value = savedLang;
+    setLanguage(savedLang);
+
+    languageSelect.addEventListener("change", () => {
+      setLanguage(languageSelect.value);
+    });
+  </script>
 </body>
 </html>
