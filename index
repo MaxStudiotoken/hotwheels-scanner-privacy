@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – Hot Wheels Scanner</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.7;
+      color: #111;
+      background: #fff;
+    }
+    h1,h2,h3{ color:#0b57d0; }
+    .box{
+      background:#f5f8ff;
+      padding:16px;
+      border-radius:10px;
+      border:1px solid #d9e5ff;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Política de Privacidad de Hot Wheels Scanner</h1>
+
+<p><strong>Última actualización:</strong> 10 de abril de 2026</p>
+
+<div class="box">
+  <p>
+    Esta Política de Privacidad describe cómo Hot Wheels Scanner recopila, utiliza,
+    almacena, protege y, en su caso, comparte información cuando los usuarios utilizan
+    la aplicación móvil Hot Wheels Scanner y los servicios relacionados.
+  </p>
+  <p>
+    Al utilizar la aplicación, el usuario acepta las prácticas descritas en esta
+    Política de Privacidad, en la medida permitida por la legislación aplicable.
+  </p>
+</div>
+
+<h2>1. Identidad del responsable</h2>
+<p>
+  Responsable del tratamiento: <strong>[TU NOMBRE O NOMBRE DE TU EMPRESA]</strong><br>
+  Correo de contacto: <strong>[TU EMAIL]</strong><br>
+  País / domicilio profesional: <strong>[TU PAÍS O DIRECCIÓN PROFESIONAL]</strong>
+</p>
+
+<h2>2. Qué hace la aplicación</h2>
+<p>
+  Hot Wheels Scanner es una aplicación orientada al reconocimiento visual y consulta
+  informativa de productos coleccionables de la marca Hot Wheels. La app puede permitir
+  al usuario tomar fotografías, analizarlas mediante sistemas automáticos y mostrar
+  resultados aproximados como identificación del producto, nombre estimado del modelo,
+  coincidencias probables y rangos orientativos de precios localizados en fuentes online
+  o servicios de terceros.
+</p>
+
+<h2>3. Datos que podemos recopilar</h2>
+
+<h3>3.1 Datos proporcionados directamente por el usuario</h3>
+<ul>
+  <li>Fotografías tomadas por el usuario desde la cámara o seleccionadas desde su dispositivo.</li>
+  <li>Consultas o textos introducidos manualmente en la aplicación.</li>
+  <li>Datos enviados por el usuario al contactar con soporte.</li>
+</ul>
+
+<h3>3.2 Datos técnicos y de uso</h3>
+<ul>
+  <li>Tipo de dispositivo, versión del sistema operativo, idioma, región y modelo del dispositivo.</li>
+  <li>Datos técnicos básicos de funcionamiento, errores, cierres inesperados y registros de diagnóstico.</li>
+  <li>Información aproximada sobre el uso de funciones de la app.</li>
+</ul>
+
+<h3>3.3 Permisos del dispositivo</h3>
+<ul>
+  <li><strong>Cámara:</strong> para capturar imágenes de productos y analizarlas.</li>
+  <li><strong>Internet / red:</strong> para procesar consultas, obtener coincidencias y mostrar resultados online.</li>
+  <li><strong>Almacenamiento o acceso a imágenes</strong> si la versión de la app permite seleccionar imágenes ya guardadas.</li>
+</ul>
+
+<h2>4. Finalidades del tratamiento</h2>
+<p>Podemos tratar los datos para las siguientes finalidades:</p>
+<ul>
+  <li>Permitir el funcionamiento principal de la aplicación.</li>
+  <li>Analizar imágenes para identificar modelos o productos de Hot Wheels.</li>
+  <li>Realizar búsquedas relacionadas con el producto detectado.</li>
+  <li>Mostrar información estimada sobre coincidencias, precios mínimos, precios máximos o referencias orientativas.</li>
+  <li>Mejorar la precisión, estabilidad, rendimiento y seguridad de la aplicación.</li>
+  <li>Prevenir fraudes, abusos o usos indebidos del servicio.</li>
+  <li>Cumplir obligaciones legales o requerimientos válidos de autoridades competentes.</li>
+</ul>
+
+<h2>5. Base jurídica del tratamiento</h2>
+<p>
+  Cuando resulte aplicable el Reglamento General de Protección de Datos (RGPD) u otra
+  normativa similar, las bases jurídicas del tratamiento podrán incluir:
+</p>
+<ul>
+  <li><strong>Ejecución del servicio solicitado por el usuario</strong>, cuando el tratamiento sea necesario para prestar la función principal de la app.</li>
+  <li><strong>Consentimiento</strong>, cuando sea necesario, por ejemplo para permisos concretos o determinados tratamientos opcionales.</li>
+  <li><strong>Interés legítimo</strong>, para mejorar el servicio, mantener la seguridad y resolver incidencias, siempre que no prevalezcan los derechos del usuario.</li>
+  <li><strong>Cumplimiento de obligaciones legales</strong>, cuando la normativa exija conservar o facilitar determinada información.</li>
+</ul>
+
+<h2>6. Uso de inteligencia artificial y análisis automatizado</h2>
+<p>
+  La aplicación puede utilizar herramientas automatizadas, incluyendo modelos de visión,
+  reconocimiento de imágenes y sistemas de inferencia asistida por inteligencia artificial,
+  para identificar productos, interpretar fotografías y generar coincidencias probables.
+</p>
+<p>
+  El usuario reconoce que:
+</p>
+<ul>
+  <li>Los resultados pueden ser <strong>aproximados</strong> y no siempre exactos.</li>
+  <li>La app puede equivocarse al identificar un modelo, edición, variante, blister, colección o precio.</li>
+  <li>Los precios mostrados son orientativos y no constituyen tasación oficial, oferta vinculante, ni garantía de valor de mercado.</li>
+</ul>
+
+<h2>7. Precios y fuentes externas</h2>
+<p>
+  Hot Wheels Scanner puede consultar información de internet o de servicios de terceros
+  para mostrar resultados estimados. Los precios mostrados pueden variar por país, estado
+  del producto, blister, rareza, edición, demanda, moneda, fecha y fuente consultada.
+</p>
+<p>
+  No garantizamos que los precios mínimos, máximos o medios sean exactos, actualizados o
+  completos en todo momento.
+</p>
+
+<h2>8. Conservación de los datos</h2>
+<p>
+  Conservaremos los datos únicamente durante el tiempo necesario para cumplir las finalidades
+  descritas en esta Política de Privacidad, salvo que la ley exija o permita un periodo superior.
+</p>
+<ul>
+  <li>Las imágenes podrán procesarse temporalmente para generar resultados.</li>
+  <li>Los registros técnicos podrán conservarse por periodos limitados para seguridad, diagnóstico y mejora del servicio.</li>
+  <li>Los datos de soporte podrán mantenerse mientras sea necesario para atender incidencias y cumplir obligaciones legales.</li>
+</ul>
+
+<h2>9. Compartición de datos</h2>
+<p>
+  No vendemos datos personales como práctica general. Sin embargo, podríamos compartir
+  información limitada con:
+</p>
+<ul>
+  <li>Proveedores tecnológicos o de infraestructura necesarios para el funcionamiento de la app.</li>
+  <li>Servicios de análisis, alojamiento, procesamiento o seguridad.</li>
+  <li>Autoridades públicas cuando exista obligación legal, requerimiento judicial o necesidad legítima de defensa jurídica.</li>
+</ul>
+<p>
+  Cuando trabajemos con terceros, adoptaremos medidas razonables para exigir que traten
+  la información conforme a la normativa aplicable y solo para finalidades compatibles.
+</p>
+
+<h2>10. Transferencias internacionales de datos</h2>
+<p>
+  Dado que ciertos servicios tecnológicos pueden operar desde distintos países, la información
+  podría ser tratada o almacenada fuera del país de residencia del usuario. Cuando sea
+  necesario, procuraremos adoptar mecanismos de protección adecuados, como cláusulas
+  contractuales, medidas de seguridad técnicas y organizativas, o cualquier otra garantía
+  exigida por la legislación aplicable.
+</p>
+
+<h2>11. Seguridad de la información</h2>
+<p>
+  Aplicamos medidas técnicas y organizativas razonables para proteger la información frente
+  a pérdida, acceso no autorizado, alteración, divulgación o destrucción. No obstante,
+  ningún sistema conectado a internet es completamente seguro y, por tanto, no podemos
+  garantizar seguridad absoluta.
+</p>
+
+<h2>12. Derechos de los usuarios</h2>
+<p>
+  Dependiendo del país o región del usuario, este puede tener determinados derechos sobre
+  sus datos personales, entre ellos:
+</p>
+<ul>
+  <li>Derecho de acceso.</li>
+  <li>Derecho de rectificación.</li>
+  <li>Derecho de supresión o eliminación.</li>
+  <li>Derecho de oposición.</li>
+  <li>Derecho a limitar el tratamiento.</li>
+  <li>Derecho a la portabilidad de los datos.</li>
+  <li>Derecho a retirar el consentimiento cuando el tratamiento se base en él.</li>
+  <li>Derecho a no ser objeto de ciertas decisiones automatizadas, cuando la ley lo contemple.</li>
+</ul>
+<p>
+  El usuario puede ejercer sus derechos escribiendo a:
+  <strong>[TU EMAIL DE PRIVACIDAD]</strong>.
+</p>
+
+<h2>13. Información específica para usuarios del Espacio Económico Europeo (EEE)</h2>
+<p>
+  Si resides en la Unión Europea o en el EEE, tratamos tus datos de conformidad con el
+  Reglamento (UE) 2016/679 (RGPD), que establece principios como licitud, lealtad,
+  transparencia, limitación de la finalidad, minimización de datos, exactitud, limitación
+  del plazo de conservación, integridad y confidencialidad. También reconoce derechos como
+  acceso, rectificación, supresión, limitación, oposición y portabilidad. 
+</p>
+
+<h2>14. Información específica para usuarios del Reino Unido</h2>
+<p>
+  Si resides en el Reino Unido, el tratamiento de tus datos puede regirse por el UK GDPR
+  y por la Data Protection Act 2018. En ese caso, tendrás derechos similares a los
+  previstos en el régimen británico de protección de datos.
+</p>
+
+<h2>15. Información específica para usuarios de California</h2>
+<p>
+  Si resides en California, podrías tener derechos conforme a la California Consumer Privacy
+  Act (CCPA), modificada por la California Privacy Rights Act (CPRA), incluyendo, según
+  corresponda, el derecho a conocer qué información se recopila, el derecho a solicitar
+  eliminación, corrección y otros derechos de privacidad previstos por la normativa aplicable.
+</p>
+<p>
+  En la medida en que la ley lo exija, facilitaremos mecanismos razonables para la gestión
+  de dichas solicitudes.
+</p>
+
+<h2>16. Información específica para usuarios de Brasil</h2>
+<p>
+  Si resides en Brasil, el tratamiento de datos personales puede estar sujeto a la Lei Geral
+  de Proteção de Dados (LGPD). En tal caso, el usuario podrá ejercer los derechos que le
+  reconozca esa normativa, incluyendo confirmación del tratamiento, acceso, corrección,
+  anonimización, bloqueo, eliminación y demás derechos legalmente previstos.
+</p>
+
+<h2>17. Menores de edad</h2>
+<p>
+  La aplicación no está dirigida intencionalmente a menores de edad cuando la ley exija
+  consentimiento parental o condiciones especiales de tratamiento. Si detectamos que se han
+  recopilado datos personales de un menor en contra de la normativa aplicable, adoptaremos
+  medidas razonables para eliminarlos o restringir su tratamiento.
+</p>
+
+<h2>18. Enlaces y servicios de terceros</h2>
+<p>
+  La app puede incluir enlaces, referencias o integraciones con servicios de terceros.
+  No somos responsables de las políticas de privacidad, prácticas o contenidos de sitios
+  web o plataformas externas. Recomendamos leer sus condiciones y políticas antes de usarlos.
+</p>
+
+<h2>19. Cambios en esta política</h2>
+<p>
+  Podemos actualizar esta Política de Privacidad en cualquier momento para reflejar cambios
+  legales, técnicos, operativos o funcionales. La versión vigente será la publicada en esta
+  misma URL, indicando su fecha de última actualización.
+</p>
+
+<h2>20. Contacto</h2>
+<p>
+  Si tienes preguntas sobre esta Política de Privacidad o deseas ejercer tus derechos,
+  puedes contactar con:
+</p>
+<p>
+  <strong>[TU NOMBRE O EMPRESA]</strong><br>
+  <strong>Email:</strong> [TU EMAIL]<br>
+  <strong>País:</strong> [TU PAÍS]
+</p>
+
+<h2>21. Aviso importante</h2>
+<p>
+  Hot Wheels Scanner ofrece resultados automáticos y estimaciones orientativas. La app no
+  garantiza autenticidad, rareza, valor de reventa, valor de inversión ni exactitud absoluta
+  en la identificación o en los precios mostrados. El usuario debe verificar siempre la
+  información con fuentes adicionales antes de tomar decisiones económicas, comerciales o de colección.
+</p>
+
+</body>
+</html>
